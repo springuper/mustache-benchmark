@@ -1,0 +1,1 @@
+<div class="comments">    <h3>{$header}</h3>    <ul>        {foreach $comments as $comment}}        <li class="comment">            <h5>{$comment.name}</h5>            <p>{$comment.body}</p>        </li>        {/foreach}    </ul></div>

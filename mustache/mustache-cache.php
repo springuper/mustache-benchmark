@@ -1,22 +1,27 @@
 <?php
-require 'benchmark.php';
-require 'libs/mustache/src/Mustache/Autoloader.php';
+require dirname(__FILE__). '/../benchmark.php';
+require dirname(__FILE__). '/../libs/mustache/src/Mustache/Autoloader.php';
 Mustache_Autoloader::register();
+$mustache = new Mustache_Engine(array(
+    'template_class_prefix' => '__MyTemplates_',
+    'cache' => 'cache',
+));
 
 function test_simple() {
-    $story_native = 'templates/story.mustache';
+    global $mustache;
+    $story_native = dirname(__FILE__). '/templates/story.mustache';
     $story_view = array(
         'name' => 'Mustache.js', 
         'url' => 'http://github.com/janl/mustache.js',
         'source' => 'git://github.com/janl/mustache.js.git',
     );
 
-    $m = new Mustache_Engine();
-    $m->render(file_get_contents($story_native), $story_view);
+    $mustache->render(file_get_contents($story_native), $story_view);
 }
 
 function test_loop() {
-    $comment_native = 'templates/comment.mustache';		
+    global $mustache;
+    $comment_native = dirname(__FILE__). '/templates/comment.mustache';		
     $comment_view = array(
         'header' => "My Post Comments",
         'comments' => array(
@@ -28,11 +33,10 @@ function test_loop() {
         )
     );
 
-    $m = new Mustache_Engine();
-    $m->render(file_get_contents($comment_native), $comment_view);
+    $mustache->render(file_get_contents($comment_native), $comment_view);
 }
 
-$simpleResults =  benchmark(10, 10000, 'test_simple');
+$simpleResults =  benchmark(10, 10000, 'test_simple', true);
 echo 'Simple Test: ', $simpleResults['time'], 'ms, ', $simpleResults['PhpMemory'], 'byte PHP, ', $simpleResults['RealMemory'], 'byte System',PHP_EOL;
-$loopResults =  benchmark(10, 10000, 'test_loop');
+$loopResults =  benchmark(10, 10000, 'test_loop', true);
 echo 'Loop Test: ', $loopResults['time'], 'ms, ', $loopResults['PhpMemory'], 'byte PHP, ', $loopResults['RealMemory'], 'byte System',PHP_EOL;

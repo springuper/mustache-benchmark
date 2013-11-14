@@ -1,0 +1,1 @@
+<div class="test">    <h2>This is a test of {$name}</h2>    <p>The homepage is <a href="{$url}">{$url}</a>.</p>    <p>The sources is: {$source}</p></div>
