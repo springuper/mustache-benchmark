@@ -1,6 +1,7 @@
 #!/bin/bash
 
 rm -f cache/__*
+chmod a+w cache
 
 echo "===NATIVE==="
 php native-benchmark.php

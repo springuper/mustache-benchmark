@@ -39,7 +39,7 @@ Loop code is:
 </div>
 ```
 
-Under the condition of 5000 times tests with 10 times repeat to achieve more accuracy, the benchmark results are:
+Under the condition of 1000 times tests with 10 times repeat to achieve more accuracy, the benchmark results are:
 
 -   NATIVE
 
