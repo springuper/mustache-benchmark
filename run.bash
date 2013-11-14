@@ -1,6 +1,7 @@
 #!/bin/bash
 
-chmod a+w cache
+chmod a+w smarty/cache
+chmod a+w mustache/cache
 
 echo "===NATIVE==="
 php native/native.php
