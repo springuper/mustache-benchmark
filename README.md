@@ -43,18 +43,18 @@ Under the condition of 10000 times tests with 10 times repeat to achieve more ac
 
 -   NATIVE
 
-    Simple Test: 422.60158691406ms, 236byte PHP, 0byte System
+    Simple Test: 401.87858886719ms, 236byte PHP, 0byte System
 
-    Loop Test: 546.904296875ms, 246.4byte PHP, 0byte System
+    Loop Test: 535.25327148437ms, 246.4byte PHP, 0byte System
 
 -   MUSTACHE
 
-    Simple Test: 1085.1153076172ms, 114468byte PHP, 786432byte System
+    Simple Test: 1083.7005615234ms, 114468byte PHP, 786432byte System
 
-    Loop Test: 2036.5076171875ms, 88222.4byte PHP, 0byte System
+    Loop Test: 2177.8474365234ms, 88222.4byte PHP, 0byte System
 
 -   MUSTACHE WITH CACHE
 
-    Simple Test: 728.39565429688ms, 37102.4byte PHP, 52428.8byte System
+    Simple Test: 735.74440917969ms, 37102.4byte PHP, 52428.8byte System
 
-    Loop Test: 1496.5395751953ms, 4422.4byte PHP, 26214.4byte System
+    Loop Test: 1635.0996826172ms, 4422.4byte PHP, 26214.4byte System
