@@ -36,6 +36,7 @@ function test_loop() {
     $mustache->render(file_get_contents($comment_native), $comment_view);
 }
 
+exec('rm -f cache/__*', $result, $return);
 $simpleResults =  benchmark(10, 10000, 'test_simple');
 echo 'Simple Test: ', $simpleResults['time'], 'ms, ', $simpleResults['PhpMemory'], 'byte PHP, ', $simpleResults['RealMemory'], 'byte System',PHP_EOL;
 $loopResults =  benchmark(10, 10000, 'test_loop');
