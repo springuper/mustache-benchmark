@@ -42,13 +42,19 @@ Loop code is:
 Under the condition of 5000 times tests with 10 times to achieve more accuracy, the benchmark results are:
 
 -   NATIVE
+
     Simple Test: 172.58696289062ms, 251.2byte PHP, 0byte System
+
     Loop Test: 211.86215820313ms, 236byte PHP, 0byte System
 
 -   MUSTACHE
+
     Simple Test: 351.74748535156ms, 106027.2byte PHP, 812646.4byte System
+
     Loop Test: 662.95397949219ms, 45887.2byte PHP, 0byte System
 
 -   MUSTACHE WITH CACHE
+
     Simple Test: 254.71838378906ms, 37112byte PHP, 52428.8byte System
+
     Loop Test: 498.42153320313ms, 4415.2byte PHP, 0byte System
