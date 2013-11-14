@@ -5,7 +5,7 @@ function benchmark($times, $runner_times, $func, $clear_cache = false)
 {
     $results = array();
     while ($times != 0){
-        if ($clear_cache) exec('rm -f cache/__*', $result, $return);
+        if ($clear_cache) exec('rm -f mustache/cache/__*; rm -f smarty/cache/*', $result, $return);
         $results[] = runner($runner_times, $func);
         $times--;
     }
