@@ -9,7 +9,7 @@ cd path/to/repo
 ./run.bash
 ```
 
-## Bechmark Results
+## Bechmark Result
 
 Two code formats are considered to be tested, simple and loop.
 
