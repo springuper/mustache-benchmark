@@ -39,22 +39,22 @@ Loop code is:
 </div>
 ```
 
-Under the condition of 10000 times tests with 10 times repeat to achieve more accuracy, the benchmark results are:
+Under the condition of 10000 times tests with 10 times repeat to achieve more accuracy, and environment of `Linux dev.sankuai.com`, the benchmark results are:
 
 -   NATIVE
 
-    Simple Test: 401.87858886719ms, 236byte PHP, 0byte System
+    Simple Test: 446.98557128906ms, 236byte PHP, 0byte System
 
-    Loop Test: 535.25327148437ms, 246.4byte PHP, 0byte System
+    Loop Test: 587.33327636719ms, 246.4byte PHP, 0byte System
 
 -   MUSTACHE
 
-    Simple Test: 1083.7005615234ms, 114468byte PHP, 786432byte System
+    Simple Test: 1089.334375ms, 114459.2byte PHP, 786432byte System
 
-    Loop Test: 2177.8474365234ms, 88222.4byte PHP, 0byte System
+    Loop Test: 2174.9577148438ms, 88196.8byte PHP, 0byte System
 
 -   MUSTACHE WITH CACHE
 
-    Simple Test: 735.74440917969ms, 37102.4byte PHP, 52428.8byte System
+    Simple Test: 722.47292480469ms, 37103.2byte PHP, 52428.8byte System
 
-    Loop Test: 1635.0996826172ms, 4422.4byte PHP, 26214.4byte System
+    Loop Test: 1600.6427246094ms, 4433.6byte PHP, 26214.4byte System
