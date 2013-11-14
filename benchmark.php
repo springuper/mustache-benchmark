@@ -1,10 +1,11 @@
 <?php
 // based on methodology developed by PPK:
 // http://www.quirksmode.org/blog/archives/2009/08/when_to_read_ou.html
-function benchmark($times, $runner_times, $func)
+function benchmark($times, $runner_times, $func, $clear_cache = false)
 {
     $results = array();
     while ($times != 0){
+        if ($clear_cache) exec('rm -f cache/__*', $result, $return);
         $results[] = runner($runner_times, $func);
         $times--;
     }
