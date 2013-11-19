@@ -38,7 +38,7 @@ function test_loop() {
     $smarty->fetch($comment_native);
 }
 
-$simpleResults =  benchmark(10, 10000, 'test_simple');
+$simpleResults =  benchmark(10, 10000, 'test_simple', true);
 echo 'Simple Test: ', $simpleResults['time'], 'ms, ', $simpleResults['PhpMemory'], 'byte PHP, ', $simpleResults['RealMemory'], 'byte System',PHP_EOL;
-$loopResults =  benchmark(10, 10000, 'test_loop');
+$loopResults =  benchmark(10, 10000, 'test_loop', true);
 echo 'Loop Test: ', $loopResults['time'], 'ms, ', $loopResults['PhpMemory'], 'byte PHP, ', $loopResults['RealMemory'], 'byte System',PHP_EOL;
