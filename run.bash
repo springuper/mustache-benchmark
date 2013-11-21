@@ -11,10 +11,10 @@ echo "===MUSTACHE==="
 php mustache/mustache.php
 echo -e "\n"
 
-echo "===MUSTACHE WITH CACHE==="
-php mustache/mustache-cache.php
+echo "===TWIG==="
+php twig/twig.php
 echo -e "\n"
 
-echo "===SMARTY WITH CACHE==="
+echo "===SMARTY==="
 php smarty/smarty.php
 echo -e "\n"
