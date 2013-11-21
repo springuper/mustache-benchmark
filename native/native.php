@@ -18,7 +18,7 @@ function test_loop() {
 function render($template, $view) {
     extract($view);
     ob_start();
-    include $template;
+    include_once $template;
     $contents = ob_get_contents();
     ob_end_clean();
     return $contents;
