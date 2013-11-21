@@ -41,33 +41,34 @@ Loop code is:
 
 Enviroments:
 
-- GNU/Linux 2.6.32-358.6.1.el6.x86_64
-- Php 5.3.3
+- GNU/Linux 3.2.0-34-virtual
+- Php 5.3.10
 - Mustache 2.4.1
+- Twig 1.15.0-DEV
 - Smarty 3.1.15
 
 Under the condition of 10000 times tests with 10 times repeat to achieve more accuracy, the benchmark results are:
 
--   NATIVE
+-	NATIVE
 
-    Simple Test: 445.17138671875ms, 236byte PHP, 0byte System
+	Simple Test: 150.80124511719ms, 388.8byte PHP, 0byte System
 
-    Loop Test: 577.066796875ms, 248.8byte PHP, 0byte System
+	Loop Test: 115.1564453125ms, 401.6byte PHP, 0byte System
 
--   MUSTACHE
+-	MUSTACHE
 
-    Simple Test: 724.44145507813ms, 37070.4byte PHP, 52428.8byte System
+	Simple Test: 653.93806152344ms, 13515.2byte PHP, 26214.4byte System
 
-    Loop Test: 1555.9180664063ms, 4378.4byte PHP, 26214.4byte System
+	Loop Test: 1284.2868408203ms, 2468byte PHP, 0byte System
 
--   MUSTACHE WITH CACHE
+-	TWIG
 
-    Simple Test: 687.74641113281ms, 37100.8byte PHP, 52428.8byte System
+	Simple Test: 461.39296875ms, 81692byte PHP, 52428.8byte System
 
-    Loop Test: 1500.4651855469ms, 4431.2byte PHP, 26214.4byte System
+	Loop Test: 1142.9485595703ms, 14024byte PHP, 26214.4byte System
 
--   SMARTY WITH CACHE
+-	SMARTY
 
-    Simple Test: 740.8416015625ms, 2527.2byte PHP, 0byte System
+	Simple Test: 747.65390625ms, 255336byte PHP, 262144byte System
 
-    Loop Test: 920.65222167969ms, 3152byte PHP, 0byte System
+	Loop Test: 915.72463378906ms, 6268byte PHP, 0byte System
