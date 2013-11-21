@@ -1,25 +1,27 @@
 <?php
 require dirname(__FILE__). '/../benchmark.php';
-require dirname(__FILE__). '/../libs/mustache/src/Mustache/Autoloader.php';
-Mustache_Autoloader::register();
-$mustache = new Mustache_Engine(array(
-    'template_class_prefix' => '__MyTemplates_',
+require dirname(__FILE__). '/../libs/twig/lib/Twig/Autoloader.php';
+Twig_Autoloader::register();
+
+$loader = new Twig_Loader_Filesystem(dirname(__FILE__). '/templates');
+$twig = new Twig_Environment($loader, array(
     'cache' => dirname(__FILE__). '/cache',
 ));
+
 $data = json_decode(file_get_contents(dirname(__FILE__). '/../data/data.json'), true);
 
 function test_simple() {
-    global $mustache;
+    global $twig;
     global $data;
-    $story_native = dirname(__FILE__). '/templates/story.mustache';
-    $mustache->render(file_get_contents($story_native), $data['story_view']);
+
+    $twig->render('story.html', $data['story_view']);
 }
 
 function test_loop() {
-    global $mustache;
+    global $twig;
     global $data;
-    $comment_native = dirname(__FILE__). '/templates/comment.mustache';		
-    $mustache->render(file_get_contents($comment_native), $data['comment_view']);
+
+    $twig->render('comment.html', $data['comment_view']);
 }
 
 $simpleResults =  benchmark(10, 10000, 'test_simple', true);

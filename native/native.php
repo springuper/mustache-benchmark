@@ -1,30 +1,18 @@
 <?php
 require 'benchmark.php';
+$data = json_decode(file_get_contents(dirname(__FILE__). '/../data/data.json'), true);
 
 function test_simple()
 {
+    global $data;
     $story_native = 'templates/story.phtml';
-    $story_view = array(
-        'name' => 'Mustache.js',
-        'url' => 'http://github.com/janl/mustache.js',
-        'source' => 'git://github.com/janl/mustache.js.git'    	
-    );
-    render($story_native,  $story_view);
+    render($story_native,  $data['story_view']);
 }
 
 function test_loop() {
+    global $data;
     $comment_native = 'templates/comment.phtml';		
-    $comment_view = array(
-        'header' => "My Post Comments",
-        'comments' => array(
-            array('name' => "Joe", 'body' => "Thanks for this post!"),
-            array('name' => "Sam", 'body' => "Thanks for this post!"),
-            array('name' => "Heather", 'body'=> "Thanks for this post!"),
-            array('name' => "Kathy", 'body' =>"Thanks for this post!"),
-            array('name' => "George", 'body'=>"Thanks for this post!"),	        	
-        )
-    );
-    render($comment_native,  $comment_view);
+    render($comment_native, $data['comment_view']);
 }
 
 function render($template, $view) {

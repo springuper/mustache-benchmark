@@ -1,0 +1,18 @@
+{
+    "story_view": {
+        "name": "Mustache.js", 
+        "url": "http://github.com/janl/mustache.js",
+        "source": "git://github.com/janl/mustache.js.git"
+    },
+    "comment_view": {
+        "header": "My Post Comments",
+        "comments": [
+            { "name": "Joe", "body": "Thanks for this post!" },
+            { "name": "Sam", "body": "Thanks for this post!" },
+            { "name": "Heather", "body": "Thanks for this post!" },
+            { "name": "Kathy", "body": "Thanks for this post!" },
+            { "name": "George", "body": "Thanks for this post!" }	        	
+        ]
+    }
+}
+
