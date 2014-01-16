@@ -11,6 +11,10 @@ echo "===MUSTACHE==="
 php mustache/mustache.php
 echo -e "\n"
 
+echo "===MUSTACHE CACHED==="
+php mustache-cached/mustache.php
+echo -e "\n"
+
 echo "===TWIG==="
 php twig/twig.php
 echo -e "\n"
