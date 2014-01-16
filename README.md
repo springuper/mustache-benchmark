@@ -49,26 +49,22 @@ Enviroments:
 
 Under the condition of 10000 times tests with 10 times repeat to achieve more accuracy, the benchmark results are:
 
--	NATIVE
+    ===NATIVE===
+    Simple Test: 146.19399414062ms, 310.4byte PHP, 0byte System
+    Loop Test: 136.38813476563ms, 236byte PHP, 26214.4byte System
 
-	Simple Test: 150.80124511719ms, 388.8byte PHP, 0byte System
+    ===MUSTACHE===
+    Simple Test: 395.30563964844ms, 23620.8byte PHP, 52428.8byte System
+    Loop Test: 780.89516601563ms, 2816byte PHP, 0byte System
 
-	Loop Test: 115.1564453125ms, 401.6byte PHP, 0byte System
+    ===MUSTACHE CACHED===
+    Simple Test: 152.10305175781ms, 200byte PHP, 0byte System
+    Loop Test: 459.80954589844ms, 200byte PHP, 0byte System
 
--	MUSTACHE
+    ===TWIG===
+    Simple Test: 176.93303222656ms, 131239.2byte PHP, 157286.4byte System
+    Loop Test: 544.47629394531ms, 15188byte PHP, 0byte System
 
-	Simple Test: 653.93806152344ms, 13515.2byte PHP, 26214.4byte System
-
-	Loop Test: 1284.2868408203ms, 2468byte PHP, 0byte System
-
--	TWIG
-
-	Simple Test: 461.39296875ms, 81692byte PHP, 52428.8byte System
-
-	Loop Test: 1142.9485595703ms, 14024byte PHP, 26214.4byte System
-
--	SMARTY
-
-	Simple Test: 747.65390625ms, 255336byte PHP, 262144byte System
-
-	Loop Test: 915.72463378906ms, 6268byte PHP, 0byte System
+    ===SMARTY===
+    Simple Test: 264.49147949219ms, 260452byte PHP, 262144byte System
+    Loop Test: 327.04890136719ms, 6908.8byte PHP, 0byte System
